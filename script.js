@@ -1,16 +1,16 @@
-// script.js
+
 document.getElementById('submit').addEventListener('click', function() {
-    const player1 = document.getElementById('player1').value;
-    const player2 = document.getElementById('player2').value;
-    if (player1 && player2) {
+    const player1 = document.getElementById('player-1').value;
+    const player2 = document.getElementById('player-2').value;
+    if (player-1 && player-2) {
         document.querySelector('.container').style.display = 'none';
         document.getElementById('game').style.display = 'block';
-        startGame(player1, player2);
+        startGame(player-1, player-2);
     }
 });
 
-function startGame(player1, player2) {
-    let currentPlayer = player1;
+function startGame(player-1, player-2) {
+    let currentPlayer = player-1;
     let currentSymbol = 'X';
     const board = document.getElementById('board');
     const cells = document.querySelectorAll('.cell');
@@ -28,7 +28,7 @@ function startGame(player1, player2) {
                     turnMessage.textContent = `It's a draw!`;
                     endGame();
                 } else {
-                    currentPlayer = currentPlayer === player1 ? player2 : player1;
+                    currentPlayer = currentPlayer === player-1 ? player-2 : player-1;
                     currentSymbol = currentSymbol === 'X' ? 'O' : 'X';
                     turnMessage.textContent = `${currentPlayer}, you're up!`;
                 }
