@@ -12,9 +12,8 @@ document.getElementById('submit').addEventListener('click', function() {
 function startGame(player1, player2) {
     let currentPlayer = player1;
     let currentSymbol = 'X';
-    const board = document.getElementById('board');
     const cells = document.querySelectorAll('.cell');
-    const turnMessage = document.getElementById('turnMessage');
+    const turnMessage = document.querySelector('#turnMessage');
     turnMessage.textContent = `${currentPlayer}, you're up!`;
 
     cells.forEach(cell => {
