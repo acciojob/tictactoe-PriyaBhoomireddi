@@ -1,4 +1,5 @@
 // script.js
+document.addEventListener('DOMContentLoaded', (event) => { 
 document.getElementById('submit').addEventListener('click', function() {
     const player1 = document.getElementById('player1').value;
     const player2 = document.getElementById('player2').value;
@@ -8,6 +9,7 @@ document.getElementById('submit').addEventListener('click', function() {
         startGame(player1, player2);
     }
 });
+	});
 
 function startGame(player1, player2) {
     let currentPlayer = player1;
