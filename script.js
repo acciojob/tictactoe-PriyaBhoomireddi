@@ -20,8 +20,10 @@ function startGame(player1, player2) {
 
     cells.forEach(cell => {
         cell.addEventListener('click', function() {
+			console.log('Cell clicked!');
             if (cell.textContent === '') {
                 cell.textContent = currentSymbol;
+				console.log(cell.textContent);
                 if (checkWin(currentSymbol)) {
                     turnMessage.textContent = `${currentPlayer} congratulations you won!`;
                     endGame();
